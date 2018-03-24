@@ -1,6 +1,6 @@
 // Unity built-in shader source. Copyright (c) 2016 Unity Technologies. MIT license (see license.txt)
 
-Shader "Standard (Roughness setup) modified"
+Shader "Custom/IntestinsTwist"
 {
     Properties
     {
@@ -88,58 +88,64 @@ Shader "Standard (Roughness setup) modified"
             #pragma fragment fragBase
             #include "UnityStandardCoreForwardCustom.cginc"
 
-VertexOutputForwardBase vertBaseCustom (VertexInput v)
-{
-    UNITY_SETUP_INSTANCE_ID(v);
-    VertexOutputForwardBase o;
-    UNITY_INITIALIZE_OUTPUT(VertexOutputForwardBase, o);
-    UNITY_TRANSFER_INSTANCE_ID(v, o);
-    UNITY_INITIALIZE_VERTEX_OUTPUT_STEREO(o);
+			float _forwardX;
+			float _forwardY;
+			float _forwardZ;
 
-    float4 posWorld = mul(unity_ObjectToWorld, v.vertex);
-    #if UNITY_REQUIRE_FRAG_WORLDPOS
-        #if UNITY_PACK_WORLDPOS_WITH_TANGENT
-            o.tangentToWorldAndPackedData[0].w = posWorld.x;
-            o.tangentToWorldAndPackedData[1].w = posWorld.y;
-            o.tangentToWorldAndPackedData[2].w = posWorld.z;
-        #else
-            o.posWorld = posWorld.xyz;
-        #endif
-    #endif
-    o.pos = UnityObjectToClipPos(v.vertex);
+			VertexOutputForwardBase vertBaseCustom (VertexInput v)
+			{
+				UNITY_SETUP_INSTANCE_ID(v);
+				VertexOutputForwardBase o;
+				UNITY_INITIALIZE_OUTPUT(VertexOutputForwardBase, o);
+				UNITY_TRANSFER_INSTANCE_ID(v, o);
+				UNITY_INITIALIZE_VERTEX_OUTPUT_STEREO(o);
 
-    o.tex = TexCoords(v);
-    o.eyeVec = NormalizePerVertexNormal(posWorld.xyz - _WorldSpaceCameraPos);
-    float3 normalWorld = UnityObjectToWorldNormal(v.normal);
-    #ifdef _TANGENT_TO_WORLD
-        float4 tangentWorld = float4(UnityObjectToWorldDir(v.tangent.xyz), v.tangent.w);
+				float4 posWorld = mul(unity_ObjectToWorld, v.vertex);
+				#if UNITY_REQUIRE_FRAG_WORLDPOS
+					#if UNITY_PACK_WORLDPOS_WITH_TANGENT
+						o.tangentToWorldAndPackedData[0].w = posWorld.x;
+						o.tangentToWorldAndPackedData[1].w = posWorld.y;
+						o.tangentToWorldAndPackedData[2].w = posWorld.z;
+					#else
+						o.posWorld = posWorld.xyz;
+					#endif
+				#endif
+				o.pos = UnityObjectToClipPos(v.vertex);
 
-        float3x3 tangentToWorld = CreateTangentToWorldPerVertex(normalWorld, tangentWorld.xyz, tangentWorld.w);
-        o.tangentToWorldAndPackedData[0].xyz = tangentToWorld[0];
-        o.tangentToWorldAndPackedData[1].xyz = tangentToWorld[1];
-        o.tangentToWorldAndPackedData[2].xyz = tangentToWorld[2];
-    #else
-        o.tangentToWorldAndPackedData[0].xyz = 0;
-        o.tangentToWorldAndPackedData[1].xyz = 0;
-        o.tangentToWorldAndPackedData[2].xyz = normalWorld;
-    #endif
+				o.tex = TexCoords(v);
+				o.eyeVec = NormalizePerVertexNormal(posWorld.xyz - _WorldSpaceCameraPos);
+				float3 normalWorld = UnityObjectToWorldNormal(v.normal);
+				#ifdef _TANGENT_TO_WORLD
+					float4 tangentWorld = float4(UnityObjectToWorldDir(v.tangent.xyz), v.tangent.w);
 
-    //We need this for shadow receving
-    UNITY_TRANSFER_SHADOW(o, v.uv1);
+					float3x3 tangentToWorld = CreateTangentToWorldPerVertex(normalWorld, tangentWorld.xyz, tangentWorld.w);
+					o.tangentToWorldAndPackedData[0].xyz = tangentToWorld[0];
+					o.tangentToWorldAndPackedData[1].xyz = tangentToWorld[1];
+					o.tangentToWorldAndPackedData[2].xyz = tangentToWorld[2];
+				#else
+					o.tangentToWorldAndPackedData[0].xyz = 0;
+					o.tangentToWorldAndPackedData[1].xyz = 0;
+					o.tangentToWorldAndPackedData[2].xyz = normalWorld;
+				#endif
 
-    o.ambientOrLightmapUV = VertexGIForward(v, posWorld, normalWorld);
+				//We need this for shadow receving
+				UNITY_TRANSFER_SHADOW(o, v.uv1);
 
-    #ifdef _PARALLAXMAP
-        TANGENT_SPACE_ROTATION;
-        half3 viewDirForParallax = mul (rotation, ObjSpaceViewDir(v.vertex));
-        o.tangentToWorldAndPackedData[0].w = viewDirForParallax.x;
-        o.tangentToWorldAndPackedData[1].w = viewDirForParallax.y;
-        o.tangentToWorldAndPackedData[2].w = viewDirForParallax.z;
-    #endif
-	o.pos.x += sin(_Time * 10 + o.pos.y * 2) * sin(_Time * 10 + o.pos.y * 2) / 5;
-    UNITY_TRANSFER_FOG(o,o.pos);
-    return o;
-}
+				o.ambientOrLightmapUV = VertexGIForward(v, posWorld, normalWorld);
+
+				#ifdef _PARALLAXMAP
+					TANGENT_SPACE_ROTATION;
+					half3 viewDirForParallax = mul (rotation, ObjSpaceViewDir(v.vertex));
+					o.tangentToWorldAndPackedData[0].w = viewDirForParallax.x;
+					o.tangentToWorldAndPackedData[1].w = viewDirForParallax.y;
+					o.tangentToWorldAndPackedData[2].w = viewDirForParallax.z;
+				#endif
+				o.pos.x += sin(_Time * 10 + o.pos.z * 2) * sin(_Time * 10 + o.pos.z * 2) / 2 * _forwardX;
+				o.pos.y += sin(_Time * 10 + o.pos.x * 2) * sin(_Time * 10 + o.pos.x * 2) / 2 * _forwardY;
+				//o.pos.z += sin(_Time * 10 + o.pos.y * 2) * sin(_Time * 10 + o.pos.y * 2) / 2 * _forwardZ;
+				UNITY_TRANSFER_FOG(o,o.pos);
+				return o;
+			}
 
             ENDCG
         }
