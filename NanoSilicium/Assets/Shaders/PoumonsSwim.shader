@@ -143,9 +143,9 @@ Shader "Custom/Poumons"
 					o.tangentToWorldAndPackedData[1].w = viewDirForParallax.y;
 					o.tangentToWorldAndPackedData[2].w = viewDirForParallax.z;
 				#endif
-				o.pos.x += sin(_Time * 10 + o.pos.z * 5) * sin(_Time * 10 + o.pos.z * 5) / 2 * _forwardX;
-				o.pos.y += sin(_Time * 10 + o.pos.x * 5) * sin(_Time * 10 + o.pos.x * 5) / 2 * _forwardY;
-				//o.pos.z += sin(_Time * 10 + o.pos.y * 2) * sin(_Time * 10 + o.pos.y * 2) / 2 * _forwardZ;
+				//o.pos.y += sin(_Time * 10) * _forwardY * abs(o.pos.x - _posX) * 10;
+				//o.pos.y += sin(_Time * 10) * abs(_posY - o.pos.y) / 2 * _forwardY;
+				//o.pos.z += sin(_Time * 10) * abs(_posZ - o.pos.z) / 2 * _forwardZ;
 				UNITY_TRANSFER_FOG(o,o.pos);
 				return o;
 			}

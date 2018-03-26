@@ -6,6 +6,9 @@ public class Poumons : MonoBehaviour {
     Vector3 arrival = Vector3.zero;
     public Material shader;
     Rigidbody rb;
+    Renderer render;
+    public List<GameObject> left;
+    public List<GameObject> right;
     bool onPlane = false;
     bool cross = false;
     // Use this for initialization
@@ -13,6 +16,7 @@ public class Poumons : MonoBehaviour {
     {
         rb = GetComponent<Rigidbody>();
         shader = GetComponentInChildren<Renderer>().material;
+        render = GetComponentInChildren<Renderer>();
     }
 
     // Update is called once per frame
@@ -20,12 +24,12 @@ public class Poumons : MonoBehaviour {
     {
         if (!shader)
             return;
-        shader.SetFloat("_forwardX", transform.forward.x);
-        shader.SetFloat("_forwardY", transform.forward.y);
-        shader.SetFloat("_forwardZ", transform.forward.z);
-        shader.SetFloat("_posX", transform.position.x);
-        shader.SetFloat("_posY", transform.position.y);
-        shader.SetFloat("_posZ", transform.position.z);
+        //left[0].transform.position += new Vector3(Mathf.Sin(Time.fixedTime * 10) * transform.forward.z / 80, Mathf.Sin(Time.fixedTime * 10) * transform.forward.x / 80, Mathf.Sin(Time.fixedTime * 10) * transform.forward.y / 80);
+        //right[0].transform.position += new Vector3(Mathf.Sin(Time.fixedTime * 10) * transform.forward.z / 80, Mathf.Sin(Time.fixedTime * 10) * transform.forward.x / 80, Mathf.Sin(Time.fixedTime * 10) * transform.forward.y / 80);
+        //left[1].transform.position += new Vector3(Mathf.Sin(Time.fixedTime * 10) * transform.forward.z / 60, Mathf.Sin(Time.fixedTime * 10) * transform.forward.x / 60, Mathf.Sin(Time.fixedTime * 10) * transform.forward.y / 60);
+        //right[1].transform.position += new Vector3(Mathf.Sin(Time.fixedTime * 10) * transform.forward.z / 60, Mathf.Sin(Time.fixedTime * 10) * transform.forward.x / 60, Mathf.Sin(Time.fixedTime * 10) * transform.forward.y / 60);
+        //left[2].transform.position += new Vector3(Mathf.Sin(Time.fixedTime * 10) * transform.forward.z / 60, Mathf.Sin(Time.fixedTime * 10) * transform.forward.x / 60, Mathf.Sin(Time.fixedTime * 10) * transform.forward.y / 60);
+        //right[2].transform.position += new Vector3(Mathf.Sin(Time.fixedTime * 10) * transform.forward.z / 60, Mathf.Sin(Time.fixedTime * 10) * transform.forward.x / 60, Mathf.Sin(Time.fixedTime * 10) * transform.forward.y / 60);
         if (arrival == Vector3.zero || Vector3.Distance(arrival, this.transform.position) < 4f)
             arrival = new Vector3(Random.Range(-20f, 20f), Random.Range(-20f, 20f), Random.Range(-20f, 20f));
         rb.velocity = Vector3.Normalize(arrival - this.transform.position) * 5;
