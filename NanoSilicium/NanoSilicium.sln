@@ -1,7 +1,9 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio for Mac
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NanoSilicium", "Assembly-CSharp.csproj", "{E9242775-5F2D-333A-42BC-896D70AAB21B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NanoSilicium", "Assembly-CSharp-Editor.csproj", "{5FF8D13B-8ADB-354D-AB83-8E9CBE35CAAF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -13,8 +15,15 @@ Global
 		{E9242775-5F2D-333A-42BC-896D70AAB21B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E9242775-5F2D-333A-42BC-896D70AAB21B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E9242775-5F2D-333A-42BC-896D70AAB21B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5FF8D13B-8ADB-354D-AB83-8E9CBE35CAAF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5FF8D13B-8ADB-354D-AB83-8E9CBE35CAAF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5FF8D13B-8ADB-354D-AB83-8E9CBE35CAAF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5FF8D13B-8ADB-354D-AB83-8E9CBE35CAAF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = Assembly-CSharp.csproj
 	EndGlobalSection
 EndGlobal
