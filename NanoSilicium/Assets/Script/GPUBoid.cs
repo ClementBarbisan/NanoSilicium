@@ -10,6 +10,8 @@ using UnityEngine;
 
 public struct GPUBoid
 {
-    public Vector3 pos, rot, flockPos;
-	public float speed, nearbyDis, boidsCount;
+    public Vector3 pos, rot;
+	public Vector3 flockPos;
+	public float speed;
 }
+

@@ -41,7 +41,10 @@ public class GPUFlock : MonoBehaviour {
             this.boidsData[i].rot = this.boidsGo[i].transform.forward;
             this.boidsGo[i].GetComponent<PathTransform>().type = (TypeTransform)Random.Range(0, 3);
         }
-        buffer = new ComputeBuffer(boidsCount, 56);
+        buffer = new ComputeBuffer(boidsCount, 40);
+        cshader.SetBuffer(this.kernelHandle, "boidBuffer", buffer);
+        cshader.SetFloat("boidsCount", boidsCount);
+        cshader.SetFloat("nearbyDis", nearbyDis);
     }
 
     GPUBoid CreateBoidData()
@@ -51,8 +54,6 @@ public class GPUFlock : MonoBehaviour {
         Quaternion rot = Quaternion.Slerp(transform.rotation, Random.rotation, 0.3f);
         boidData.pos = pos;
         boidData.flockPos = transform.position;
-        boidData.boidsCount = this.boidsCount;
-        boidData.nearbyDis = this.nearbyDis;
         boidData.speed = this.flockSpeed + Random.Range(-1f, 1f);
 
         return boidData;
@@ -97,7 +98,6 @@ public class GPUFlock : MonoBehaviour {
 
         buffer.SetData(this.boidsData);
 
-        cshader.SetBuffer(this.kernelHandle, "boidBuffer", buffer);
         cshader.SetFloat("deltaTime", Time.deltaTime);
 
         cshader.Dispatch(this.kernelHandle, this.boidsCount, 1, 1);
