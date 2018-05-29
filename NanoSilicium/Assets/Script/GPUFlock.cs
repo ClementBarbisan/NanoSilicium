@@ -54,7 +54,7 @@ public class GPUFlock : MonoBehaviour {
         Quaternion rot = Quaternion.Slerp(transform.rotation, Random.rotation, 0.3f);
         boidData.pos = pos;
         boidData.flockPos = transform.position;
-        boidData.speed = this.flockSpeed + Random.Range(-1f, 1f);
+        boidData.speed = this.flockSpeed + Random.Range(-3f, 3f);
 
         return boidData;
     }
@@ -67,7 +67,7 @@ public class GPUFlock : MonoBehaviour {
     void Update()
     {
 
-        this.targetPos += new Vector3(0.5f, 1.25f, 0.75f);
+        this.targetPos += new Vector3(0.25f, 0.75f, 0.5f);
         positionsTarget[0] += new Vector3(
             (Mathf.Sin(Mathf.Deg2Rad * this.targetPos.x) * -1f),
             (Mathf.Sin(Mathf.Deg2Rad * this.targetPos.y) * 1f),
@@ -79,9 +79,9 @@ public class GPUFlock : MonoBehaviour {
             (Mathf.Cos(Mathf.Deg2Rad * this.targetPos.z) * 1f)
         );
         positionsTarget[2] += new Vector3(
-            (Mathf.Cos(Mathf.Deg2Rad * this.targetPos.x) * Mathf.Sin(Mathf.Deg2Rad * this.targetPos.x) * -1f),
-            (Mathf.Cos(Mathf.Deg2Rad * this.targetPos.y) * Mathf.Sin(Mathf.Deg2Rad * this.targetPos.y) * 1f),
-            (Mathf.Cos(Mathf.Deg2Rad * this.targetPos.z) * Mathf.Sin(Mathf.Deg2Rad * this.targetPos.z) * 1f)
+            (Mathf.Cos(Mathf.Deg2Rad * this.targetPos.x / 2) * Mathf.Sin(Mathf.Deg2Rad * this.targetPos.x / 2) * -1f),
+            (Mathf.Cos(Mathf.Deg2Rad * this.targetPos.y / 2) * Mathf.Sin(Mathf.Deg2Rad * this.targetPos.y / 2) * 1f),
+            (Mathf.Cos(Mathf.Deg2Rad * this.targetPos.z / 2) * Mathf.Sin(Mathf.Deg2Rad * this.targetPos.z / 2) * 1f)
         );
 
 
