@@ -204,7 +204,6 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 1211615685}
   - {fileID: 1618624792}
   m_Father: {fileID: 0}
   m_RootOrder: 1
@@ -215,7 +214,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1187409107}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 73cf3b6efac91e14d91e36ad555d1838, type: 3}
   m_Name: 
@@ -231,6 +230,7 @@ GameObject:
   - component: {fileID: 1211615684}
   - component: {fileID: 1211615682}
   - component: {fileID: 1211615681}
+  - component: {fileID: 1211615683}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -252,6 +252,18 @@ Behaviour:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1211615680}
   m_Enabled: 1
+--- !u!114 &1211615683
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1211615680}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d10b6af17de84ed1b8749f2c3d6b1d5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 1
 --- !u!20 &1211615684
 Camera:
   m_ObjectHideFlags: 0
@@ -298,8 +310,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 5.7, z: -17}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 1187409109}
-  m_RootOrder: 0
+  m_Father: {fileID: 0}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 17.570002, y: 0, z: 0}
 --- !u!1 &1618624791
 GameObject:
@@ -328,7 +340,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1187409109}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1618624793
 MonoBehaviour:
@@ -343,9 +355,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cshader: {fileID: 7200000, guid: 94eb23f4b69aca2478b16883b939bd98, type: 3}
   boidPrefab: {fileID: 1458858254367330, guid: c00e15977ba884c9d82b6a43794e5cce, type: 2}
-  boidsCount: 100
-  spawnRadius: 50
+  boidsCount: 250
+  spawnRadius: 100
   boidsGo: []
-  flockSpeed: 5
-  nearbyDis: 4
+  flockSpeed: 20
+  nearbyDis: 12
   positionsTarget: []
