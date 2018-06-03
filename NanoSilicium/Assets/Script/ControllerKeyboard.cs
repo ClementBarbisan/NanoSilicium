@@ -13,12 +13,12 @@ public class ControllerKeyboard : MonoBehaviour {
     void Update()
     {
         if (Input.GetKey(KeyCode.Z))
-            transform.Translate(Camera.main.transform.forward * speed);
+            transform.Translate(Camera.main.transform.forward * speed * Time.deltaTime);
         else if (Input.GetKey(KeyCode.S))
-            transform.Translate(-Camera.main.transform.forward * speed);
+            transform.Translate(-Camera.main.transform.forward * speed * Time.deltaTime);
         if (Input.GetKey(KeyCode.Q))
-            transform.Translate(-Camera.main.transform.right * speed);
+            transform.Translate(-Camera.main.transform.right * speed * Time.deltaTime);
         else if (Input.GetKey(KeyCode.D))
-            transform.Translate(Camera.main.transform.right * speed);
+            transform.Translate(Camera.main.transform.right * speed * Time.deltaTime);
     }
 }

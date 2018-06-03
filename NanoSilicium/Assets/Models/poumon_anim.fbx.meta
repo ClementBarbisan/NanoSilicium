@@ -1,0 +1,171 @@
+fileFormatVersion: 2
+guid: ddb290945356f98459fef4d9e9594657
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: toutlesorganes_corps_rig_anim:droite
+    100004: toutlesorganes_corps_rig_anim:joint128
+    100006: toutlesorganes_corps_rig_anim:joint130
+    100008: toutlesorganes_corps_rig_anim:joint131
+    100010: toutlesorganes_corps_rig_anim:joint132
+    100012: toutlesorganes_corps_rig_anim:joint133
+    100014: toutlesorganes_corps_rig_anim:joint134
+    100016: toutlesorganes_corps_rig_anim:joint135
+    100018: toutlesorganes_corps_rig_anim:joint136
+    100020: toutlesorganes_corps_rig_anim:joint137
+    100022: toutlesorganes_corps_rig_anim:joint138
+    100024: toutlesorganes_corps_rig_anim:joint141
+    100026: toutlesorganes_corps_rig_anim:joint142
+    100028: toutlesorganes_corps_rig_anim:joint143
+    100030: toutlesorganes_corps_rig_anim:joint144
+    100032: toutlesorganes_corps_rig_anim:joint145
+    100034: toutlesorganes_corps_rig_anim:joint146
+    100036: toutlesorganes_corps_rig_anim:joint147
+    100038: toutlesorganes_corps_rig_anim:joint148
+    100040: toutlesorganes_corps_rig_anim:joint149
+    100042: toutlesorganes_corps_rig_anim:joint150
+    100044: toutlesorganes_corps_rig_anim:jonction_ailes
+    100046: toutlesorganes_corps_rig_anim:poumon_msh
+    100048: toutlesorganes_corps_rig_anim:poumon_msh_rig
+    100050: toutlesorganes_corps_rig_anim:queue
+    400000: //RootNode
+    400002: toutlesorganes_corps_rig_anim:droite
+    400004: toutlesorganes_corps_rig_anim:joint128
+    400006: toutlesorganes_corps_rig_anim:joint130
+    400008: toutlesorganes_corps_rig_anim:joint131
+    400010: toutlesorganes_corps_rig_anim:joint132
+    400012: toutlesorganes_corps_rig_anim:joint133
+    400014: toutlesorganes_corps_rig_anim:joint134
+    400016: toutlesorganes_corps_rig_anim:joint135
+    400018: toutlesorganes_corps_rig_anim:joint136
+    400020: toutlesorganes_corps_rig_anim:joint137
+    400022: toutlesorganes_corps_rig_anim:joint138
+    400024: toutlesorganes_corps_rig_anim:joint141
+    400026: toutlesorganes_corps_rig_anim:joint142
+    400028: toutlesorganes_corps_rig_anim:joint143
+    400030: toutlesorganes_corps_rig_anim:joint144
+    400032: toutlesorganes_corps_rig_anim:joint145
+    400034: toutlesorganes_corps_rig_anim:joint146
+    400036: toutlesorganes_corps_rig_anim:joint147
+    400038: toutlesorganes_corps_rig_anim:joint148
+    400040: toutlesorganes_corps_rig_anim:joint149
+    400042: toutlesorganes_corps_rig_anim:joint150
+    400044: toutlesorganes_corps_rig_anim:jonction_ailes
+    400046: toutlesorganes_corps_rig_anim:poumon_msh
+    400048: toutlesorganes_corps_rig_anim:poumon_msh_rig
+    400050: toutlesorganes_corps_rig_anim:queue
+    2100000: toutlesorganes_corps_rig_anim_poumon_shd
+    4300000: toutlesorganes_corps_rig_anim:poumon_msh
+    7400000: toutlesorganes_corps_rig_anim_3_text
+    9500000: //RootNode
+    13700000: toutlesorganes_corps_rig_anim:poumon_msh
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: toutlesorganes_corps_rig_anim_3_text
+      takeName: toutlesorganes_corps_rig_anim_3_text
+      firstFrame: 1
+      lastFrame: 75
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

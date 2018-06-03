@@ -1,0 +1,221 @@
+fileFormatVersion: 2
+guid: deca1405da2e743409b35050a2fed731
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: toutlesorganes_corps_rig_anim:instestin2
+    100004: toutlesorganes_corps_rig_anim:intestin_msh_rig
+    100006: toutlesorganes_corps_rig_anim:joint151
+    100008: toutlesorganes_corps_rig_anim:joint152
+    100010: toutlesorganes_corps_rig_anim:joint153
+    100012: toutlesorganes_corps_rig_anim:joint154
+    100014: toutlesorganes_corps_rig_anim:joint155
+    100016: toutlesorganes_corps_rig_anim:joint156
+    100018: toutlesorganes_corps_rig_anim:joint157
+    100020: toutlesorganes_corps_rig_anim:joint158
+    100022: toutlesorganes_corps_rig_anim:joint159
+    100024: toutlesorganes_corps_rig_anim:joint160
+    100026: toutlesorganes_corps_rig_anim:joint161
+    100028: toutlesorganes_corps_rig_anim:joint162
+    100030: toutlesorganes_corps_rig_anim:joint163
+    100032: toutlesorganes_corps_rig_anim:joint164
+    100034: toutlesorganes_corps_rig_anim:joint165
+    100036: toutlesorganes_corps_rig_anim:joint166
+    100038: toutlesorganes_corps_rig_anim:joint167
+    100040: toutlesorganes_corps_rig_anim:joint168
+    100042: toutlesorganes_corps_rig_anim:joint169
+    100044: toutlesorganes_corps_rig_anim:joint170
+    100046: toutlesorganes_corps_rig_anim:joint171
+    100048: toutlesorganes_corps_rig_anim:joint172
+    100050: toutlesorganes_corps_rig_anim:joint173
+    100052: toutlesorganes_corps_rig_anim:joint174
+    100054: toutlesorganes_corps_rig_anim:joint175
+    100056: toutlesorganes_corps_rig_anim:joint176
+    100058: toutlesorganes_corps_rig_anim:joint177
+    100060: toutlesorganes_corps_rig_anim:joint178
+    100062: toutlesorganes_corps_rig_anim:joint179
+    100064: toutlesorganes_corps_rig_anim:joint180
+    100066: toutlesorganes_corps_rig_anim:joint181
+    100068: toutlesorganes_corps_rig_anim:joint182
+    100070: toutlesorganes_corps_rig_anim:joint183
+    100072: toutlesorganes_corps_rig_anim:joint184
+    100074: toutlesorganes_corps_rig_anim:joint185
+    100076: toutlesorganes_corps_rig_anim:joint186
+    100078: toutlesorganes_corps_rig_anim:joint187
+    100080: toutlesorganes_corps_rig_anim:joint188
+    100082: toutlesorganes_corps_rig_anim:joint189
+    100084: toutlesorganes_corps_rig_anim:joint190
+    100086: toutlesorganes_corps_rig_anim:joint191
+    100088: toutlesorganes_corps_rig_anim:joint192
+    100090: toutlesorganes_corps_rig_anim:joint193
+    100092: toutlesorganes_corps_rig_anim:joint194
+    100094: toutlesorganes_corps_rig_anim:joint195
+    100096: toutlesorganes_corps_rig_anim:joint196
+    100098: toutlesorganes_corps_rig_anim:joint197
+    100100: toutlesorganes_corps_rig_anim:joint198
+    400000: //RootNode
+    400002: toutlesorganes_corps_rig_anim:instestin2
+    400004: toutlesorganes_corps_rig_anim:intestin_msh_rig
+    400006: toutlesorganes_corps_rig_anim:joint151
+    400008: toutlesorganes_corps_rig_anim:joint152
+    400010: toutlesorganes_corps_rig_anim:joint153
+    400012: toutlesorganes_corps_rig_anim:joint154
+    400014: toutlesorganes_corps_rig_anim:joint155
+    400016: toutlesorganes_corps_rig_anim:joint156
+    400018: toutlesorganes_corps_rig_anim:joint157
+    400020: toutlesorganes_corps_rig_anim:joint158
+    400022: toutlesorganes_corps_rig_anim:joint159
+    400024: toutlesorganes_corps_rig_anim:joint160
+    400026: toutlesorganes_corps_rig_anim:joint161
+    400028: toutlesorganes_corps_rig_anim:joint162
+    400030: toutlesorganes_corps_rig_anim:joint163
+    400032: toutlesorganes_corps_rig_anim:joint164
+    400034: toutlesorganes_corps_rig_anim:joint165
+    400036: toutlesorganes_corps_rig_anim:joint166
+    400038: toutlesorganes_corps_rig_anim:joint167
+    400040: toutlesorganes_corps_rig_anim:joint168
+    400042: toutlesorganes_corps_rig_anim:joint169
+    400044: toutlesorganes_corps_rig_anim:joint170
+    400046: toutlesorganes_corps_rig_anim:joint171
+    400048: toutlesorganes_corps_rig_anim:joint172
+    400050: toutlesorganes_corps_rig_anim:joint173
+    400052: toutlesorganes_corps_rig_anim:joint174
+    400054: toutlesorganes_corps_rig_anim:joint175
+    400056: toutlesorganes_corps_rig_anim:joint176
+    400058: toutlesorganes_corps_rig_anim:joint177
+    400060: toutlesorganes_corps_rig_anim:joint178
+    400062: toutlesorganes_corps_rig_anim:joint179
+    400064: toutlesorganes_corps_rig_anim:joint180
+    400066: toutlesorganes_corps_rig_anim:joint181
+    400068: toutlesorganes_corps_rig_anim:joint182
+    400070: toutlesorganes_corps_rig_anim:joint183
+    400072: toutlesorganes_corps_rig_anim:joint184
+    400074: toutlesorganes_corps_rig_anim:joint185
+    400076: toutlesorganes_corps_rig_anim:joint186
+    400078: toutlesorganes_corps_rig_anim:joint187
+    400080: toutlesorganes_corps_rig_anim:joint188
+    400082: toutlesorganes_corps_rig_anim:joint189
+    400084: toutlesorganes_corps_rig_anim:joint190
+    400086: toutlesorganes_corps_rig_anim:joint191
+    400088: toutlesorganes_corps_rig_anim:joint192
+    400090: toutlesorganes_corps_rig_anim:joint193
+    400092: toutlesorganes_corps_rig_anim:joint194
+    400094: toutlesorganes_corps_rig_anim:joint195
+    400096: toutlesorganes_corps_rig_anim:joint196
+    400098: toutlesorganes_corps_rig_anim:joint197
+    400100: toutlesorganes_corps_rig_anim:joint198
+    2100000: toutlesorganes_corps_rig_anim_Intestin_shd
+    4300000: toutlesorganes_corps_rig_anim:instestin2
+    7400000: toutlesorganes_corps_rig_anim_3_text
+    9500000: //RootNode
+    13700000: toutlesorganes_corps_rig_anim:instestin2
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: toutlesorganes_corps_rig_anim_3_text
+      takeName: toutlesorganes_corps_rig_anim_3_text
+      firstFrame: 1
+      lastFrame: 75
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
