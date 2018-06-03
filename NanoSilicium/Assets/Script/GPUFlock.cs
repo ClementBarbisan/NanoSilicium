@@ -26,7 +26,8 @@ public class GPUFlock : MonoBehaviour {
     public Vector3[] positionsTarget;
     private Vector3 targetPos = Vector3.zero;
     private int kernelHandle;
-    private ComputeBuffer buffer; 
+    private ComputeBuffer buffer;
+    public static bool activate = true;
     void Start()
     {
         this.boidsGo = new GameObject[this.boidsCount];
@@ -66,6 +67,8 @@ public class GPUFlock : MonoBehaviour {
 
     void Update()
     {
+        if (!activate)
+            return;
 
         this.targetPos += new Vector3(0.25f, 0.75f, 0.5f);
         positionsTarget[0] += new Vector3(
