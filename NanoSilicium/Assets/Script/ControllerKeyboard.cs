@@ -30,29 +30,18 @@ public class ControllerKeyboard : MonoBehaviour {
             transform.Translate(Camera.main.transform.right * speed * Time.deltaTime);
         Vector2 touchpad = (device.GetAxis(Valve.VR.EVRButtonId.k_EButton_Axis0));
 
-        if (touchpad.y > 0.7f)
+        if (Mathf.Abs(touchpad.y) > 0.7f)
         {
             print("Moving Up");
-            transform.Translate(Camera.main.transform.forward * speed * Time.deltaTime);
+            transform.Translate(Camera.main.transform.forward * speed * Time.deltaTime * touchpad.y);
         }
 
-        else if (touchpad.y < -0.7f)
-        {
-            print("Moving Down");
-            transform.Translate(-Camera.main.transform.forward * speed * Time.deltaTime);
-        }
-
-        if (touchpad.x > 0.7f)
+        if (Mathf.Abs(touchpad.x) > 0.7f)
         {
             print("Moving Right");
-            transform.Translate(Camera.main.transform.right * speed * Time.deltaTime);
+            transform.Translate(Camera.main.transform.right * speed * Time.deltaTime * touchpad.x);
         }
 
-        else if (touchpad.x < -0.7f)
-        {
-            print("Moving left");
-            transform.Translate(-Camera.main.transform.right * speed * Time.deltaTime);
-        }
         if (device.GetPressDown(SteamVR_Controller.ButtonMask.Touchpad))
         {
             GPUFlock.activate = !GPUFlock.activate;
