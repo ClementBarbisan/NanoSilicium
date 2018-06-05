@@ -144,7 +144,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   index: -1
   modelOverride: 
-  shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 3}
+  shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
   verbose: 0
   createComponents: 1
   updateDynamically: 1
@@ -361,6 +361,7 @@ GameObject:
   m_Component:
   - component: {fileID: 215168322}
   - component: {fileID: 215168323}
+  - component: {fileID: 215168324}
   m_Layer: 0
   m_Name: Controller (right)
   m_TagString: Untagged
@@ -395,8 +396,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d37c2cf88f7c59f4c8cf5d3812568143, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  index: -1
+  index: 2
   origin: {fileID: 0}
+--- !u!114 &215168324
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 215168321}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d10b6af17de84ed1b8749f2c3d6b1d5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 15
+  CameraRig: {fileID: 1185075943}
 --- !u!1 &267290084
 GameObject:
   m_ObjectHideFlags: 0
@@ -836,6 +850,7 @@ GameObject:
   m_Component:
   - component: {fileID: 925015533}
   - component: {fileID: 925015534}
+  - component: {fileID: 925015535}
   m_Layer: 0
   m_Name: Controller (left)
   m_TagString: Untagged
@@ -870,8 +885,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d37c2cf88f7c59f4c8cf5d3812568143, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  index: -1
+  index: 1
   origin: {fileID: 0}
+--- !u!114 &925015535
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 925015532}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d10b6af17de84ed1b8749f2c3d6b1d5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 15
+  CameraRig: {fileID: 1185075943}
 --- !u!1 &982883515
 GameObject:
   m_ObjectHideFlags: 0
@@ -985,7 +1013,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   index: -1
   modelOverride: 
-  shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 3}
+  shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
   verbose: 0
   createComponents: 1
   updateDynamically: 1
@@ -1067,7 +1095,6 @@ GameObject:
   - component: {fileID: 1185075947}
   - component: {fileID: 1185075946}
   - component: {fileID: 1185075945}
-  - component: {fileID: 1185075949}
   m_Layer: 0
   m_Name: '[CameraRig]'
   m_TagString: Untagged
@@ -1179,18 +1206,6 @@ MonoBehaviour:
   right: {fileID: 215168321}
   objects: []
   assignAllBeforeIdentified: 0
---- !u!114 &1185075949
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1185075943}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4d10b6af17de84ed1b8749f2c3d6b1d5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 1
 --- !u!1 &1187409107
 GameObject:
   m_ObjectHideFlags: 0
@@ -1445,11 +1460,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cshader: {fileID: 7200000, guid: 94eb23f4b69aca2478b16883b939bd98, type: 3}
   boidPrefab: {fileID: 1458858254367330, guid: c00e15977ba884c9d82b6a43794e5cce, type: 2}
-  boidsCount: 250
-  spawnRadius: 100
+  boidsCount: 50
+  spawnRadius: 50
   boidsGo: []
   flockSpeed: 20
-  nearbyDis: 12
+  nearbyDis: 10
   positionsTarget: []
 --- !u!1 &1636022860
 GameObject:

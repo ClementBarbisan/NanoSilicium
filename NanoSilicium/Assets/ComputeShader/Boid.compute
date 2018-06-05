@@ -69,7 +69,7 @@ void CSMain (uint3 id : SV_DispatchThreadID)
 
 	float3 direction = alignment + separation + normalize(cohesion - boid.pos);
 
-	boid.rot = lerp(boid.rot, normalize(direction), deltaTime);
+	boid.rot = lerp(boid.rot, normalize(direction), deltaTime / 5);
 
 	boid.pos += boid.rot * boid.speed * deltaTime;
 

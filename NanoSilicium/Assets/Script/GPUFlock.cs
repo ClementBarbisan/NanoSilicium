@@ -70,33 +70,33 @@ public class GPUFlock : MonoBehaviour {
         if (!activate)
             return;
 
-        this.targetPos += new Vector3(0.25f, 0.75f, 0.5f);
+        this.targetPos += new Vector3(0.125f, 0.175f, 0.15f);
         positionsTarget[0] += new Vector3(
-            (Mathf.Sin(Mathf.Deg2Rad * this.targetPos.x) * -1f),
-            (Mathf.Sin(Mathf.Deg2Rad * this.targetPos.y) * 1f),
-            (Mathf.Sin(Mathf.Deg2Rad * this.targetPos.z) * 1f)
+            (Mathf.Sin(Mathf.Deg2Rad * this.targetPos.x) * -0.05f),
+            (Mathf.Sin(Mathf.Deg2Rad * this.targetPos.y) * 0.05f),
+            (Mathf.Sin(Mathf.Deg2Rad * this.targetPos.z) * 0.05f)
         );
         positionsTarget[1] += new Vector3(
-            (Mathf.Cos(Mathf.Deg2Rad * this.targetPos.x) * -1f),
-            (Mathf.Cos(Mathf.Deg2Rad * this.targetPos.y) * 1f),
-            (Mathf.Cos(Mathf.Deg2Rad * this.targetPos.z) * 1f)
+            (Mathf.Cos(Mathf.Deg2Rad * this.targetPos.x) * -0.05f),
+            (Mathf.Cos(Mathf.Deg2Rad * this.targetPos.y) * 0.05f),
+            (Mathf.Cos(Mathf.Deg2Rad * this.targetPos.z) * 0.05f)
         );
         positionsTarget[2] += new Vector3(
-            (Mathf.Cos(Mathf.Deg2Rad * this.targetPos.x / 2) * Mathf.Sin(Mathf.Deg2Rad * this.targetPos.x / 2) * -1f),
-            (Mathf.Cos(Mathf.Deg2Rad * this.targetPos.y / 2) * Mathf.Sin(Mathf.Deg2Rad * this.targetPos.y / 2) * 1f),
-            (Mathf.Cos(Mathf.Deg2Rad * this.targetPos.z / 2) * Mathf.Sin(Mathf.Deg2Rad * this.targetPos.z / 2) * 1f)
+            (Mathf.Cos(Mathf.Deg2Rad * this.targetPos.x / 2) * Mathf.Sin(Mathf.Deg2Rad * this.targetPos.x / 2) * -0.1f),
+            (Mathf.Cos(Mathf.Deg2Rad * this.targetPos.y / 2) * Mathf.Sin(Mathf.Deg2Rad * this.targetPos.y / 2) * 0.1f),
+            (Mathf.Cos(Mathf.Deg2Rad * this.targetPos.z / 2) * Mathf.Sin(Mathf.Deg2Rad * this.targetPos.z / 2) * 0.1f)
         );
 
 
 
         for (int i = 0; i < this.boidsData.Length; i++)
         {
-            if (boidsGo[i].GetComponent<PathTransform>().type == TypeTransform.Cos)
+            // if (boidsGo[i].GetComponent<PathTransform>().type == TypeTransform.Cos)
                 this.boidsData[i].flockPos = positionsTarget[0];
-            else if (boidsGo[i].GetComponent<PathTransform>().type == TypeTransform.Sin)
-                this.boidsData[i].flockPos = positionsTarget[1];
-            else if (boidsGo[i].GetComponent<PathTransform>().type == TypeTransform.SinCos)
-                this.boidsData[i].flockPos = positionsTarget[2];
+            // else if (boidsGo[i].GetComponent<PathTransform>().type == TypeTransform.Sin)
+                // this.boidsData[i].flockPos = positionsTarget[1];
+            // else if (boidsGo[i].GetComponent<PathTransform>().type == TypeTransform.SinCos)
+                // this.boidsData[i].flockPos = positionsTarget[2];
         }
 
         buffer.SetData(this.boidsData);
