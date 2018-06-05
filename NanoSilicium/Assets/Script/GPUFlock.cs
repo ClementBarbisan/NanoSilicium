@@ -28,6 +28,7 @@ public class GPUFlock : MonoBehaviour {
     private int kernelHandle;
     private ComputeBuffer buffer;
     public static bool activate = true;
+    private bool ping = false;
     void Start()
     {
         this.boidsGo = new GameObject[this.boidsCount];
@@ -70,33 +71,43 @@ public class GPUFlock : MonoBehaviour {
         if (!activate)
             return;
 
-        this.targetPos += new Vector3(0.125f, 0.175f, 0.15f);
-        positionsTarget[0] += new Vector3(
-            (Mathf.Sin(Mathf.Deg2Rad * this.targetPos.x) * -0.05f),
-            (Mathf.Sin(Mathf.Deg2Rad * this.targetPos.y) * 0.05f),
-            (Mathf.Sin(Mathf.Deg2Rad * this.targetPos.z) * 0.05f)
-        );
-        positionsTarget[1] += new Vector3(
-            (Mathf.Cos(Mathf.Deg2Rad * this.targetPos.x) * -0.05f),
-            (Mathf.Cos(Mathf.Deg2Rad * this.targetPos.y) * 0.05f),
-            (Mathf.Cos(Mathf.Deg2Rad * this.targetPos.z) * 0.05f)
-        );
-        positionsTarget[2] += new Vector3(
-            (Mathf.Cos(Mathf.Deg2Rad * this.targetPos.x / 2) * Mathf.Sin(Mathf.Deg2Rad * this.targetPos.x / 2) * -0.1f),
-            (Mathf.Cos(Mathf.Deg2Rad * this.targetPos.y / 2) * Mathf.Sin(Mathf.Deg2Rad * this.targetPos.y / 2) * 0.1f),
-            (Mathf.Cos(Mathf.Deg2Rad * this.targetPos.z / 2) * Mathf.Sin(Mathf.Deg2Rad * this.targetPos.z / 2) * 0.1f)
+        if (targetPos.x > Mathf.PI)
+            ping = true;
+        else if (targetPos.x <= 0)
+            ping = false;
+        if (ping)
+            this.targetPos += new Vector3(0.0015f, -0.003f, 0.015f);
+        else
+            this.targetPos += new Vector3(0.0015f, 0.003f, 0.015f);
+
+        //positionsTarget[0] += new Vector3(
+        //    (Mathf.Sin(Mathf.Deg2Rad * this.targetPos.x) * -0.05f),
+        //    (Mathf.Sin(Mathf.Deg2Rad * this.targetPos.y) * 0.05f),
+        //    (Mathf.Sin(Mathf.Deg2Rad * this.targetPos.z) * 0.05f)
+        //);
+        //positionsTarget[1] += new Vector3(
+        //    (Mathf.Cos(Mathf.Deg2Rad * this.targetPos.x) * -0.05f),
+        //    (Mathf.Cos(Mathf.Deg2Rad * this.targetPos.y) * 0.05f),
+        //    (Mathf.Cos(Mathf.Deg2Rad * this.targetPos.z) * 0.05f)
+        //);
+        transform.position = new Vector3(
+            (Mathf.Cos(this.targetPos.x) * Mathf.Sin(this.targetPos.y) * 40),
+            (Mathf.Sin(this.targetPos.x) * Mathf.Sin(this.targetPos.y) * 40),
+            (Mathf.Cos(this.targetPos.x) * 40)
         );
 
 
 
         for (int i = 0; i < this.boidsData.Length; i++)
         {
+            this.boidsData[i].flockPos = transform.position;
+
             // if (boidsGo[i].GetComponent<PathTransform>().type == TypeTransform.Cos)
-                this.boidsData[i].flockPos = positionsTarget[0];
+            //this.boidsData[i].flockPos = positionsTarget[0];
             // else if (boidsGo[i].GetComponent<PathTransform>().type == TypeTransform.Sin)
-                // this.boidsData[i].flockPos = positionsTarget[1];
+            // this.boidsData[i].flockPos = positionsTarget[1];
             // else if (boidsGo[i].GetComponent<PathTransform>().type == TypeTransform.SinCos)
-                // this.boidsData[i].flockPos = positionsTarget[2];
+            // this.boidsData[i].flockPos = positionsTarget[2];
         }
 
         buffer.SetData(this.boidsData);
