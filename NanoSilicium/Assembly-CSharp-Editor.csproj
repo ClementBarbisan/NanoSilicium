@@ -51,6 +51,11 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\AniInstancing\Editor\AnimationGenerator.cs" />
+     <Compile Include="Assets\AniInstancing\Editor\buidlBundle.cs" />
+     <Compile Include="Assets\AniInstancing\Editor\GenerateObjectInfo.cs" />
+     <Compile Include="Assets\AniInstancing\Editor\PostImportAnimationInfo.cs" />
+     <Compile Include="Assets\AniInstancing\Editor\UtilityHelper.cs" />
      <Compile Include="Assets\Oculus\AudioManager\Scripts\Audio\Editor\AudioImportPostProcessor.cs" />
      <Compile Include="Assets\Oculus\AudioManager\Scripts\Audio\Editor\AudioManagerInspector.cs" />
      <Compile Include="Assets\Oculus\AudioManager\Scripts\Audio\Editor\MinMaxPropertyDrawer.cs" />

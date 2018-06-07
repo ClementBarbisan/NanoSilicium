@@ -51,6 +51,18 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\AniInstancing\Example\Scripts\showFPS.cs" />
+     <Compile Include="Assets\AniInstancing\Example\Scripts\TestInstancing.cs" />
+     <Compile Include="Assets\AniInstancing\Example\TestProject2\Scripts\RandomCharacters.cs" />
+     <Compile Include="Assets\AniInstancing\Example\TestProject2\Scripts\Spawner.cs" />
+     <Compile Include="Assets\AniInstancing\Example\TestProject2\Scripts\ThirdPersonCamera.cs" />
+     <Compile Include="Assets\AniInstancing\Scripts\AnimationInfo.cs" />
+     <Compile Include="Assets\AniInstancing\Scripts\AnimationInstancing.cs" />
+     <Compile Include="Assets\AniInstancing\Scripts\AnimationInstancingMgr.cs" />
+     <Compile Include="Assets\AniInstancing\Scripts\AnimationManager.cs" />
+     <Compile Include="Assets\AniInstancing\Scripts\EventReceiver.cs" />
+     <Compile Include="Assets\AniInstancing\Scripts\runtimeHelper.cs" />
+     <Compile Include="Assets\AniInstancing\Scripts\Singleton.cs" />
      <Compile Include="Assets\Oculus\AudioManager\Scenes\Scripts\TestScript.cs" />
      <Compile Include="Assets\Oculus\AudioManager\Scripts\Audio\AmbienceEmitter.cs" />
      <Compile Include="Assets\Oculus\AudioManager\Scripts\Audio\AudioManager.cs" />
@@ -879,6 +891,7 @@
      <None Include="Assets\Oculus\SampleFramework\OVRInspector\Resources\OVRSettings.txt" />
      <None Include="Assets\PostProcessing\Resources\Shaders\Tonemapping.cginc" />
      <None Include="Assets\Oculus\VR\Shaders\OVRColorRampAlpha.shader" />
+     <None Include="Assets\Shaders\AnimationInstancingBase.cginc" />
      <None Include="Assets\Oculus\Avatar\Content\Materials\AvatarSurfaceShader.shader" />
      <None Include="Assets\Oculus\SampleFramework\SampleScenes\First Person\Mirror\Resources\Mirror.txt" />
      <None Include="Assets\PostProcessing\Editor Resources\Monitors\HistogramCompute.compute" />
@@ -902,6 +915,7 @@
      <None Include="Assets\PostProcessing\Editor Resources\Monitors\VectorscopeCompute.compute" />
      <None Include="Assets\PostProcessing\Resources\Shaders\FXAA3.cginc" />
      <None Include="Assets\PostProcessing\Resources\Shaders\MotionBlur.shader" />
+     <None Include="Assets\Shaders\Normal-DiffuseInstancing.shader" />
      <None Include="Assets\PostProcessing\Resources\Shaders\AmbientOcclusion.shader" />
      <None Include="Assets\Oculus\VR\Resources\OVRMRUnlit.shader" />
      <None Include="Assets\Oculus\SampleFramework\SampleScenes\Rendering\Mono Optimization\Resources\MonoOptimization.txt" />
@@ -911,7 +925,6 @@
      <None Include="Assets\Oculus\VR\Shaders\Unlit Crosshair.shader" />
      <None Include="Assets\PostProcessing\Resources\Bluenoise64\LICENSE.txt" />
      <None Include="Assets\Oculus\SampleFramework\SampleScenes\Common\Unity Sample Assets\Vehicles\Car\Shaders\ReflectiveDiffuseSpec.shader" />
-     <None Include="Assets\Shaders\IntestinsTwist.shader" />
      <None Include="Assets\Oculus\SampleFramework\SampleScenes\Common\Unity Sample Assets\Zombie Assets\Shaders\Rim Lit Bumped Specular.shader" />
      <None Include="Assets\PostProcessing\Resources\Shaders\BuiltinDebugViews.shader" />
      <None Include="Assets\Oculus\VR\Resources\Unlit Transparent Color.shader" />
@@ -930,7 +943,6 @@
      <None Include="Assets\Oculus\SampleFramework\SampleScenes\Common\Unity Sample Assets\CrossPlatformInput\CrossPlatformInputGuidelines.txt" />
      <None Include="Assets\Oculus\SampleFramework\SampleScenes\First Person\Locomotion2\TeleportAvatar\Resources\TeleportTuningHelp.txt" />
      <None Include="Assets\Oculus\SampleFramework\SampleScenes\Common\Unity Sample Assets\Zombie Assets\Fonts\LuckiestGuy\LICENSE.txt" />
-     <None Include="Assets\Shaders\TestModel.shader" />
      <None Include="Assets\Oculus\VR\Resources\Underlay Transparent Occluder.shader" />
      <None Include="Assets\PostProcessing\Resources\Shaders\Bloom.cginc" />
      <None Include="Assets\Oculus\VR\Resources\Texture2D Blit.shader" />
@@ -938,9 +950,11 @@
      <None Include="Assets\Oculus\SampleFramework\OVRInspector\Resources\UISettings.txt" />
      <None Include="Assets\PostProcessing\Resources\Shaders\EyeHistogram.compute" />
      <None Include="Assets\Oculus\SampleFramework\LICENSE.txt" />
+     <None Include="Assets\AniInstancing\Shader\AnimationInstancingBase.cginc" />
      <None Include="Assets\Oculus\SampleFramework\SampleScenes\First Person\Crosshairs\Script\Shader\OnTopShader.shader" />
      <None Include="Assets\PostProcessing\Resources\Shaders\TAA.cginc" />
      <None Include="Assets\Shaders\UnityStandardCoreForwardCustom.cginc" />
+     <None Include="Assets\Shaders\Mobile-BumpSpec_instancing.shader" />
      <None Include="Assets\Oculus\Avatar\Content\Materials\AvatarSurfaceShaderPBS.shader" />
      <None Include="Assets\PostProcessing\Resources\Shaders\EyeAdaptation.cginc" />
      <None Include="Assets\PostProcessing\Resources\Shaders\GrainGen.shader" />
@@ -951,6 +965,7 @@
      <None Include="Assets\Oculus\SampleFramework\SampleScenes\Input\Input Tester\Resources\InputTester.txt" />
      <None Include="Assets\PostProcessing\Resources\Shaders\ScreenSpaceRaytrace.cginc" />
      <None Include="Assets\Oculus\SampleFramework\SampleScenes\First Person\Resources\Scale.txt" />
+     <None Include="Assets\Shaders\Normal-BumpSpecinstancing.shader" />
      <None Include="Assets\Oculus\VR\Resources\OVRMRCameraFrame.shader" />
      <None Include="Assets\Oculus\SampleFramework\SampleScenes\Hands\Resources\DistanceGrab.txt" />
      <None Include="Assets\PostProcessing\Resources\Shaders\Bloom.shader" />

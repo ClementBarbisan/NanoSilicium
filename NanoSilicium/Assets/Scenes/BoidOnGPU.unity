@@ -1459,7 +1459,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cshader: {fileID: 7200000, guid: 94eb23f4b69aca2478b16883b939bd98, type: 3}
-  boidPrefab: {fileID: 1458858254367330, guid: c00e15977ba884c9d82b6a43794e5cce, type: 2}
+  boidPrefab: {fileID: 1458858254367330, guid: 810a0259fb8034a4baecca202f09c3a9, type: 2}
   boidsCount: 50
   spawnRadius: 25
   boidsGo: []
