@@ -521,15 +521,6 @@
     <None Include="Assets\PostProcessing\Resources\Shaders\Uber.shader" />
     <None Include="Assets\PostProcessing\Resources\Shaders\UberSecondPass.cginc" />
     <None Include="Assets\PostProcessing\Utilities\CustomMotionTexture\Shaders\CustomMotionVectorTexture.shader" />
-    <None Include="Assets\Shaders\AnimationInstancingBase.cginc" />
-    <None Include="Assets\Shaders\InstancingOrgan.shader" />
-    <None Include="Assets\Shaders\Mobile-BumpSpec_instancing.shader" />
-    <None Include="Assets\Shaders\Normal-BumpSpecinstancing.shader" />
-    <None Include="Assets\Shaders\Normal-DiffuseInstancing.shader" />
-    <None Include="Assets\Shaders\PoumonsSwim.shader" />
-    <None Include="Assets\Shaders\UnityStandardCoreCustom.cginc" />
-    <None Include="Assets\Shaders\UnityStandardCoreForwardCustom.cginc" />
-    <None Include="Assets\Shaders\UnityStandardCoreForwardSimpleCustom.cginc" />
     <None Include="Assets\SteamVR\InteractionSystem\Core\Shaders\SeeThru.shader" />
     <None Include="Assets\SteamVR\InteractionSystem\Core\Shaders\Silhouette.shader" />
     <None Include="Assets\SteamVR\InteractionSystem\Hints\Shaders\ControllerButtonHints.shader" />

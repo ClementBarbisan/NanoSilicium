@@ -409,8 +409,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4d10b6af17de84ed1b8749f2c3d6b1d5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 15
-  CameraRig: {fileID: 1185075943}
 --- !u!1 &267290084
 GameObject:
   m_ObjectHideFlags: 0
@@ -898,8 +896,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4d10b6af17de84ed1b8749f2c3d6b1d5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 15
-  CameraRig: {fileID: 1185075943}
 --- !u!1 &982883515
 GameObject:
   m_ObjectHideFlags: 0
@@ -1214,7 +1210,6 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1187409109}
-  - component: {fileID: 1187409110}
   m_Layer: 0
   m_Name: FlockMgr
   m_TagString: Untagged
@@ -1236,17 +1231,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1187409110
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1187409107}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 73cf3b6efac91e14d91e36ad555d1838, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1306628777
 GameObject:
   m_ObjectHideFlags: 0
@@ -1410,7 +1394,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1397661263}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.5, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1185075944}
@@ -1455,17 +1439,19 @@ MonoBehaviour:
   m_GameObject: {fileID: 1618624791}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ae2e62327f183ad41bf98f9485f90be1, type: 3}
+  m_Script: {fileID: 11500000, guid: 129e6e805b9da504aab382009f7af285, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   cshader: {fileID: 7200000, guid: 94eb23f4b69aca2478b16883b939bd98, type: 3}
   boidPrefab: {fileID: 1458858254367330, guid: 810a0259fb8034a4baecca202f09c3a9, type: 2}
-  boidsCount: 50
-  spawnRadius: 25
+  boidAnimPrefab: {fileID: 1458858254367330, guid: c00e15977ba884c9d82b6a43794e5cce,
+    type: 2}
+  boidsCount: 200
+  boidsAnimCount: 10
+  spawnRadius: 50
   boidsGo: []
   flockSpeed: 20
-  nearbyDis: 10
-  positionsTarget: []
+  nearbyDis: 6
 --- !u!1 &1636022860
 GameObject:
   m_ObjectHideFlags: 0

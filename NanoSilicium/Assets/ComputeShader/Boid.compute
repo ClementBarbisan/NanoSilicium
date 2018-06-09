@@ -20,7 +20,7 @@ float boidsCount;
 float nearbyDis;
 
 
-[numthreads(256,1,1)]
+[numthreads(512,1,1)]
 void CSMain (uint3 id : SV_DispatchThreadID)
 {
 	Boid boid = boidBuffer[id.x];
@@ -41,6 +41,7 @@ void CSMain (uint3 id : SV_DispatchThreadID)
     float tempSpeed = 0;
 	uint nearbyCount = 0;
 
+	[loop]
 	for (int i = 0; i < int(boidsCount); i++)
 	{
 		if (i != int(id.x))

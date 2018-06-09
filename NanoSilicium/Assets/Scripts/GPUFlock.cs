@@ -17,13 +17,15 @@ public class GPUFlock : MonoBehaviour {
 
     public ComputeShader cshader;
     public GameObject boidPrefab;
+    public GameObject boidAnimPrefab;
     public int boidsCount;
+    public int boidsAnimCount;
     public float spawnRadius;
     public GameObject[] boidsGo;
     public GPUBoid[] boidsData;
     public float flockSpeed;
     public float nearbyDis;
-    public Vector3[] positionsTarget;
+    //public Vector3[] positionsTarget;
     private Vector3 targetPos = Vector3.zero;
     private int kernelHandle;
     private ComputeBuffer buffer;
@@ -35,11 +37,14 @@ public class GPUFlock : MonoBehaviour {
         this.boidsData = new GPUBoid[this.boidsCount];
         this.kernelHandle = cshader.FindKernel("CSMain");
 
-        positionsTarget = new Vector3[3];
+        //positionsTarget = new Vector3[3];
         for (int i = 0; i < this.boidsCount; i++)
         {
             this.boidsData[i] = this.CreateBoidData();
-            this.boidsGo[i] = Instantiate(boidPrefab, this.boidsData[i].pos, Quaternion.Euler(this.boidsData[i].rot)) as GameObject;
+            if (i >= boidsCount - boidsAnimCount)
+                this.boidsGo[i] = Instantiate(boidAnimPrefab, this.boidsData[i].pos, Quaternion.Euler(this.boidsData[i].rot)) as GameObject;
+            else
+                this.boidsGo[i] = Instantiate(boidPrefab, this.boidsData[i].pos, Quaternion.Euler(this.boidsData[i].rot)) as GameObject;
             this.boidsData[i].rot = this.boidsGo[i].transform.forward;
             this.boidsGo[i].GetComponent<PathTransform>().type = (TypeTransform)Random.Range(0, 3);
         }
@@ -91,14 +96,14 @@ public class GPUFlock : MonoBehaviour {
         //    (Mathf.Cos(Mathf.Deg2Rad * this.targetPos.z) * 0.05f)
         //);
         transform.position = new Vector3(
-            (Mathf.Cos(this.targetPos.x) * Mathf.Sin(this.targetPos.y) * 40),
-            (Mathf.Sin(this.targetPos.x) * Mathf.Sin(this.targetPos.y) * 40),
-            (Mathf.Cos(this.targetPos.x) * 40)
+            (Mathf.Cos(this.targetPos.x) * Mathf.Sin(this.targetPos.y) * 50),
+            (Mathf.Sin(this.targetPos.x) * Mathf.Sin(this.targetPos.y) * 50),
+            (Mathf.Cos(this.targetPos.x) * 50)
         );
 
 
 
-        for (int i = 0; i < this.boidsData.Length; i++)
+        for (int i = 0; i < boidsCount - boidsAnimCount; i++)
         {
             this.boidsData[i].flockPos = transform.position;
 
@@ -109,8 +114,13 @@ public class GPUFlock : MonoBehaviour {
             // else if (boidsGo[i].GetComponent<PathTransform>().type == TypeTransform.SinCos)
             // this.boidsData[i].flockPos = positionsTarget[2];
         }
+        for (int i = boidsCount - boidsAnimCount; i < boidsCount; i++)
+        {
+            this.boidsData[i].flockPos = -transform.position / 2;
+        }
 
         buffer.SetData(this.boidsData);
+
 
         cshader.SetFloat("deltaTime", Time.deltaTime);
 
