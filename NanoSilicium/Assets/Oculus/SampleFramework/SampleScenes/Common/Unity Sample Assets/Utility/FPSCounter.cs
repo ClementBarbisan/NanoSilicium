@@ -24,7 +24,7 @@ using UnityEngine;
 
 namespace UnitySampleAssets.Utility
 {
-    [RequireComponent(typeof (GUIText))]
+    [RequireComponent(typeof (TextMesh))]
     public class FPSCounter : MonoBehaviour
     {
         private float fpsMeasurePeriod = 0.5f;
@@ -32,6 +32,7 @@ namespace UnitySampleAssets.Utility
         private float fpsNextPeriod = 0;
         private int currentFps;
         private string display = "{0} FPS";
+        private bool active = false;
 
         private void Start()
         {
@@ -47,7 +48,15 @@ namespace UnitySampleAssets.Utility
                 currentFps = (int) (fpsAccumulator/fpsMeasurePeriod);
                 fpsAccumulator = 0;
                 fpsNextPeriod += fpsMeasurePeriod;
-                GetComponent<GUIText>().text = string.Format(display, currentFps);
+                GetComponent<TextMesh>().text = string.Format(display, currentFps);
+            }
+            if (Input.GetKeyDown(KeyCode.F))
+            {
+                active = !active;
+                if (active)
+                    GetComponent<Renderer>().enabled = true;
+                else
+                    GetComponent<Renderer>().enabled = false;
             }
         }
     }

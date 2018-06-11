@@ -500,6 +500,9 @@ GameObject:
   - component: {fileID: 335161728}
   - component: {fileID: 335161727}
   - component: {fileID: 335161729}
+  - component: {fileID: 335161732}
+  - component: {fileID: 335161731}
+  - component: {fileID: 335161730}
   - component: {fileID: 335161726}
   m_Layer: 0
   m_Name: Camera (eye)
@@ -593,6 +596,73 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   profile: {fileID: 11400000, guid: 71c74cfaacbe5b74ab541777c67fffac, type: 2}
+--- !u!114 &335161730
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 335161724}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 22bbf57ec543cee42a5aa0ec2dd9e457, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!102 &335161731
+TextMesh:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 335161724}
+  m_Text: 
+  m_OffsetZ: 12
+  m_CharacterSize: 1
+  m_LineSpacing: 1
+  m_Anchor: 4
+  m_Alignment: 1
+  m_TabSize: 4
+  m_FontSize: 18
+  m_FontStyle: 0
+  m_RichText: 1
+  m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+  m_Color:
+    serializedVersion: 2
+    rgba: 4294967295
+--- !u!23 &335161732
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 335161724}
+  m_Enabled: 0
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 4294967295
+  m_Materials:
+  - {fileID: 10100, guid: 0000000000000000e000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
 --- !u!1 &424952788
 GameObject:
   m_ObjectHideFlags: 0
@@ -1447,7 +1517,7 @@ MonoBehaviour:
   boidAnimPrefab: {fileID: 1458858254367330, guid: c00e15977ba884c9d82b6a43794e5cce,
     type: 2}
   boidsCount: 200
-  boidsAnimCount: 10
+  boidsAnimCount: 5
   spawnRadius: 50
   boidsGo: []
   flockSpeed: 20
@@ -1681,7 +1751,6 @@ GameObject:
   - component: {fileID: 1745456811}
   - component: {fileID: 1745456814}
   - component: {fileID: 1745456813}
-  - component: {fileID: 1745456812}
   - component: {fileID: 1745456815}
   m_Layer: 0
   m_Name: Camera (head)
@@ -1706,14 +1775,6 @@ Transform:
   m_Father: {fileID: 1185075944}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!92 &1745456812
-Behaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 92000014137301068, guid: 41c0760bd81dd084283814f0c432b466,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1745456810}
-  m_Enabled: 1
 --- !u!114 &1745456813
 MonoBehaviour:
   m_ObjectHideFlags: 0
