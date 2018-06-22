@@ -6,6 +6,6 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/BoidOnGPU.unity
-    guid: 49b0adb6ae0b1bc49a855c8551b886a2
+    path: Assets/Scenes/Creatures.unity
+    guid: 9c2c20304391c2b4d9818e9bd8f2b7f5
   m_configObjects: {}

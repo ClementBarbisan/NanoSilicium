@@ -36,23 +36,22 @@ public class ControllerKeyboard : MonoBehaviour {
             CameraRig.transform.Translate(Camera.main.transform.right * speed * Time.deltaTime);
         if (device == null)
             return;
-        if (device.GetPressDown(SteamVR_Controller.ButtonMask.Touchpad))
+        if (device.GetPress(SteamVR_Controller.ButtonMask.Touchpad))
         {
             Vector2 touchpad = (device.GetAxis(Valve.VR.EVRButtonId.k_EButton_Axis0));
 
-            if (Mathf.Abs(touchpad.y) > 0.7f)
+            if (Mathf.Abs(touchpad.y) > 0.5f)
             {
                 CameraRig.transform.Translate(Camera.main.transform.forward * speed * Time.deltaTime * touchpad.y);
             }
 
-            if (Mathf.Abs(touchpad.x) > 0.7f)
+            if (Mathf.Abs(touchpad.x) > 0.5f)
             {
                 CameraRig.transform.Translate(Camera.main.transform.right * speed * Time.deltaTime * touchpad.x);
             }
         }
         if (device.GetPressDown(SteamVR_Controller.ButtonMask.Trigger))
         {
-            Debug.LogError("Activate");
             GPUFlock.activate = !GPUFlock.activate;
         }
     }
