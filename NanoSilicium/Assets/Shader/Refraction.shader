@@ -100,7 +100,7 @@ Shader "FX/Refraction Distort" {
 
 		half4 col = tex2D(_MainTex, i.uv.xy);
 
-		half diffuse = saturate(dot(col.xyz, worldNormal)) + 0.25;
+		half diffuse = saturate(dot(col.xyz, worldNormal) * 1.25);
 		// Calculate refracted vector based on the surface normal.
 		// This is only an approximation because we don't know the
 		// thickness of the object. So just use anything that looks
