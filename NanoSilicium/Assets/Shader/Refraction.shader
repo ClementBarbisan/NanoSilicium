@@ -29,7 +29,9 @@ Shader "FX/Refraction Distort" {
 		// We can access the result in the next pass as _GrabTexture
 		GrabPass{
 		Name "BASE"
+
 		Tags{ "LightMode" = "Always" }
+
 	}
 
 		// Main pass: Take the texture grabbed above and use the normals to perturb it
@@ -37,6 +39,7 @@ Shader "FX/Refraction Distort" {
 		Pass{
 		Name "BASE"
 		Tags{ "LightMode" = "Always" }
+		Cull Off
 
 		CGPROGRAM
 		// profiles arbfp1
@@ -97,7 +100,7 @@ Shader "FX/Refraction Distort" {
 
 		half4 col = tex2D(_MainTex, i.uv.xy);
 
-		half diffuse = saturate(dot(col.xyz, worldNormal) * 1.2);
+		half diffuse = saturate(dot(col.xyz, worldNormal)) + 0.25;
 		// Calculate refracted vector based on the surface normal.
 		// This is only an approximation because we don't know the
 		// thickness of the object. So just use anything that looks
@@ -127,6 +130,8 @@ Shader "FX/Refraction Distort" {
 		Blend DstColor Zero
 		Pass{
 		Name "BASE"
+		Cull Off
+
 		SetTexture[_MainTex]{ combine texture }
 	}
 	}

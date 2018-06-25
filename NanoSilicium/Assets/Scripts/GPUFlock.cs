@@ -96,9 +96,9 @@ public class GPUFlock : MonoBehaviour {
         //    (Mathf.Cos(Mathf.Deg2Rad * this.targetPos.z) * 0.05f)
         //);
         transform.position = new Vector3(
-            (Mathf.Cos(this.targetPos.x) * Mathf.Sin(this.targetPos.y) * 50),
-            (Mathf.Sin(this.targetPos.x) * Mathf.Sin(this.targetPos.y) * 50),
-            (Mathf.Cos(this.targetPos.x) * 50)
+            (Mathf.Cos(this.targetPos.x) * Mathf.Sin(this.targetPos.y) * 100),
+            (Mathf.Sin(this.targetPos.x) * Mathf.Sin(this.targetPos.y) * 100),
+            (Mathf.Cos(this.targetPos.x) * 100)
         );
 
 

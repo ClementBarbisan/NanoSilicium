@@ -1496,7 +1496,7 @@ MonoBehaviour:
   spawnRadius: 50
   boidsGo: []
   flockSpeed: 20
-  nearbyDis: 6
+  nearbyDis: 14
 --- !u!1 &1636022860
 GameObject:
   m_ObjectHideFlags: 0
